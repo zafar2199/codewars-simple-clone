@@ -4,11 +4,11 @@ import { useAuthContext } from "./context/AuthProvider";
 import { appRoutes, authRoutes } from "./constants/routes";
 
 const App = () => {
-    const { user } = useAuthContext();
+    const { isloggedin } = useAuthContext();
 
     const router = useMemo(() => {
-        return user ? appRoutes : authRoutes;
-    }, [user]);
+        return isloggedin ? appRoutes : authRoutes;
+    }, [isloggedin]);
 
     return <RouterProvider router={router} />;
 };
