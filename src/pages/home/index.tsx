@@ -1,5 +1,11 @@
-const Home = () => {
-    return <>Home</>
-}
+import UserProfile from "./components/UserProfile";
 
-export default Home
+const Home = () => {
+    return (
+        <div className="home__container">
+            <UserProfile />
+        </div>
+    );
+};
+
+export default Home;

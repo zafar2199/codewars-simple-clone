@@ -1,0 +1,79 @@
+.user-profile {
+    background: var(--color-background-secondary);
+    margin-top: 36px;
+    min-height: 90px;
+    padding: 16px;
+    border-radius: 8px;
+
+    &__avatar {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--ui-red);
+    }
+
+    &__content {
+        flex: 1 1 auto;
+    }
+}
+
+.profile-pattern {
+    height: 40px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+
+    &__left {
+        flex: 1 1 auto;
+        min-width: 220px;
+        height: 100%;
+        clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 5% 100%, 0 50%, 5% 0%);
+        background-color: var(--color-background-light);
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @media screen and (max-width: 756px) {
+            min-width: 180px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        color: var(--color-text);
+        @media screen and (max-width: 756px) {
+            font-size: 14px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__honor {
+        font-size: 14px;
+        color: var(--color-text-secondary);
+    }
+}
+
+.user-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media screen and (max-width: 756px) {
+        flex-direction: column;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

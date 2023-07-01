@@ -6,9 +6,15 @@ body,
     height: 100%;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-color: var(--color-background);
     font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 [class*="__container"] {
@@ -16,4 +22,42 @@ body {
     width: 100%;
     margin-inline: auto;
     padding-inline: 20px;
+}
+
+// Kyu pattern
+.kyu-pattern {
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 16% 100%, 0 50%, 16% 0);
+    padding: 3px;
+    height: 100%;
+    width: 64px;
+    flex-shrink: 0;
+    background-color: var(--ui-yellow);
+    &__inside {
+        clip-path: polygon(85% 0, 100% 50%, 85% 100%, 16% 100%, 0 50%, 16% 0);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-background);
+    }
+
+    &__text {
+        font-size: 14px;
+        color: var(--ui-yellow);
+    }
+}
+
+// info label
+.user-info {
+    font-size: 16px;
+
+    b {
+        color: var(--color-text-secondary);
+        margin-right: 6px;
+    }
+
+    span {
+        color: var(--color-text);
+    }
 }

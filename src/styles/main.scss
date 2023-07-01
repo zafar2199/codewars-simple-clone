@@ -3,5 +3,8 @@
 
 @use "./global";
 
+// components
+@use "./components/user-profile";
+
 // Pages
 @use "./page/login";
