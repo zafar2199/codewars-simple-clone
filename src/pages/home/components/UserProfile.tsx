@@ -1,4 +1,3 @@
-import { UserIcon } from "../../../components/icons";
 import { useAuthContext } from "../../../context/AuthProvider";
 
 const UserProfile = () => {
